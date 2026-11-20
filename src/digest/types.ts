@@ -9,4 +9,4 @@ export type DigestRow = {
   lastAt: string;
 };
 
-export declare function readNight(runsDir: string, night: string): DigestRow[] | null;
+export type ReadNight = (runsDir: string, night: string) => DigestRow[] | null;
