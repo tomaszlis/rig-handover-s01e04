@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-20
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Run log reader | — | claude-code · sonnet-5.5 · medium | 2026-11-20 |
+| 2 | Digest page: GET /digest/:night | #1 | claude-code · sonnet-5.5 · medium | 2026-11-20 |
+| 3 | Digest JSON: GET /api/digest/:night | #1 | claude-code · sonnet-5.5 · medium | 2026-11-20 |
+| 4 | Status board links to digest | #1 | claude-code · sonnet-5.5 · medium | 2026-11-20 |
+| 5 | Route tests for digest page and JSON | #1, #2, #3 | claude-code · sonnet-5.5 · medium | 2026-11-20 |
+| 6 | Preview for review | #2 | claude-code · sonnet-5.5 · low | 2026-11-20 |
+| 7 | Clean up: strip lane marker, archive plan | #6 | claude-code · sonnet-5.5 · low | 2026-11-20 |
+
+The preview went up on a separate public host (`tomaszlis/mega-previews`, GitHub Pages), not in
+this repo, per ADR 0003. Its lane marker was stripped and the page re-uploaded once review was in.
